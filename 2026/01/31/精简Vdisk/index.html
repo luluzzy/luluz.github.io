@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/css/layout.css">
 
 		
-		<title> about -  lulu&#39;s Blog</title>
+		<title> 精简Vdisk -  lulu&#39;s Blog</title>
 		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
 		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
 		
@@ -123,7 +123,7 @@
 		</a>
 		
 		<a
-			class="kira-list-item mdui-ripple true"
+			class="kira-list-item mdui-ripple false"
 			href="/about/"
 			title="关于本人"
 		>
@@ -310,30 +310,42 @@
 			<img
 				data-src="/images/muzimi.jpg"
 				data-sizes="auto"
-				alt="about"
+				alt="精简Vdisk"
 				class="lazyload kira-post-cover-image disabled-kira-image"
 			/>
-			<h1>about</h1>
+			<h1>精简Vdisk</h1>
 		</div>
 		
 		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
-			<a><i class="kirafont icon-calendar-fill"></i>2026年01月30日</a>
-			<a><i class="kirafont icon-edit-fill"></i>0 字</a>
+			<a><i class="kirafont icon-calendar-fill"></i>2026年01月31日</a>
+			<a><i class="kirafont icon-edit-fill"></i>152 字</a>
 			<a><i class="kirafont icon-time-circle-fill"></i>大概 1 分钟</a>
 		</div>
-		<html><head></head><body></body></html>
+		<html><head></head><body><h2><span id="wsl-wsl%E8%BF%9B%E9%98%B6-%E7%B2%BE%E7%AE%80vhdx">[WSL] WSL进阶 精简vhdx</span></h2><p>在WSL使用时我们难免发现一个情况，明明我们在Linux内已经删除了部分非常大的历史文件，但是在windows的虚拟磁盘大小仍然不变，久了之后我们的磁盘可能会不够用，那么需要用vdisk compact一下磁盘了</p>
+<p>我们先找到我们的vhdx路径，例如我这里是存放在D盘的</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="/images/posts/wsl-vdisk/disk.png" alt="image1" class="lazyload"></p>
+<p>随后在PowerShell里面执行</p>
+<figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-comment"># 关闭当前正在运行的Wsl分发版本</span><br>wsl <span class="hljs-literal">--shutdown</span><br><br>diskpart<br><span class="hljs-built_in">select</span> vdisk file=<span class="hljs-string">"D:\WSL\Ubuntu-20.04\ext4.vhdx"</span><br><br><span class="hljs-comment"># 压缩磁盘</span><br>compact vdisk<br><br><span class="hljs-comment"># 完成之后</span><br><span class="hljs-keyword">exit</span><br></code></pre></td></tr></tbody></table></figure>
+
+</body></html>
 	</article>
 
 	 
     <div class="kira-post-copyright">
         <strong>Author：</strong>luluzzy<br>
-        <strong>Link：</strong><a href="https://luluzzy.github.io/about/index.html" title="https:&#x2F;&#x2F;luluzzy.github.io&#x2F;about&#x2F;index.html" target="_blank" rel="noopener">https:&#x2F;&#x2F;luluzzy.github.io&#x2F;about&#x2F;index.html</a><br>
+        <strong>Link：</strong><a href="https://luluzzy.github.io/2026/01/31/%E7%B2%BE%E7%AE%80Vdisk/" title="https:&#x2F;&#x2F;luluzzy.github.io&#x2F;2026&#x2F;01&#x2F;31&#x2F;精简Vdisk&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;luluzzy.github.io&#x2F;2026&#x2F;01&#x2F;31&#x2F;精简Vdisk&#x2F;</a><br>
         
             <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
         
     </div>
 
   
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			
+		</nav>
+	</div>
+	
 	<div class="kira-post-meta kira-rainbow">
 		
 		

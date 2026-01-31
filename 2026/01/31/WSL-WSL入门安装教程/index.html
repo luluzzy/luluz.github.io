@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html 
+	lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> [WSL]WSL入门安装教程 -  lulu&#39;s Blog</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+		<link
+			rel="shortcut icon"
+			href="https://kira.host/assets/Pictures/Others/116359b4ccf19917.jpg"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 8.1.1"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('/images/muzimi.jpg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="lulu&#39;s Blog">
+        <img
+			src="/images/icon.png"
+			alt="luluzzy"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a href="/images/icon.png" title="luluzzy">
+			<img
+				src="/images/icon.png"
+				alt="luluzzy"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>3</div>
+		<div><span>标签</span>0</div>
+		<div><span>分类</span>0</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive/"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about/"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1054438588&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/<改成你的B站uid>"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/luluzzy/"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://gitee.com/<你的gitee id>"
+				target="_blank"
+				mdui-tooltip="{content: 'Gitee'}"
+				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-gitee
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+		
+			
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			Archive
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/">2026</a><span class="archive-list-count">3</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2026
+		<a href="/">luluzzy</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div class="kira-post-cover">
+			<img
+				data-src="/images/covers/wsl.png"
+				data-sizes="auto"
+				alt="[WSL]WSL入门安装教程"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>[WSL]WSL入门安装教程</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2026年01月31日</a>
+			<a><i class="kirafont icon-edit-fill"></i>563 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 2 分钟</a>
+		</div>
+		<html><head></head><body><h2><span id="wsl-wsl%E5%85%A5%E9%97%A8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B">[WSL] WSL入门安装教程</span></h2><p><strong>推荐版本: Ubuntu-20.04 Ubuntu-22.04 Arch</strong></p>
+<p>截至 2026年1月31日查看的版本如下:</p>
+<figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">PS</span> C:\Users\Administrator&gt; wsl <span class="hljs-literal">--list</span> <span class="hljs-literal">--online</span><br>以下是可安装的有效分发的列表。<br>使用“wsl.exe <span class="hljs-literal">--install</span> &lt;Distro&gt;”安装。<br><br>NAME                            FRIENDLY NAME<br>Ubuntu                          Ubuntu<br>Ubuntu<span class="hljs-literal">-24</span>.<span class="hljs-number">04</span>                    Ubuntu <span class="hljs-number">24.04</span> LTS<br>openS<span class="hljs-built_in">USE-Tumbleweed</span>             openSUSE Tumbleweed<br>openS<span class="hljs-built_in">USE-Leap</span><span class="hljs-literal">-16</span>.<span class="hljs-number">0</span>              openSUSE Leap <span class="hljs-number">16.0</span><br>S<span class="hljs-built_in">USE-Linux</span><span class="hljs-literal">-Enterprise-15-SP7</span>    SUSE Linux Enterprise <span class="hljs-number">15</span> SP7<br>S<span class="hljs-built_in">USE-Linux</span><span class="hljs-literal">-Enterprise-16</span>.<span class="hljs-number">0</span>      SUSE Linux Enterprise <span class="hljs-number">16.0</span><br>kali<span class="hljs-literal">-linux</span>                      Kali Linux Rolling<br>Debian                          Debian GNU/Linux<br>AlmaLinux<span class="hljs-literal">-8</span>                     AlmaLinux OS <span class="hljs-number">8</span><br>AlmaLinux<span class="hljs-literal">-9</span>                     AlmaLinux OS <span class="hljs-number">9</span><br>AlmaLinux<span class="hljs-literal">-Kitten-10</span>             AlmaLinux OS Kitten <span class="hljs-number">10</span><br>AlmaLinux<span class="hljs-literal">-10</span>                    AlmaLinux OS <span class="hljs-number">10</span><br>archlinux                       Arch Linux<br>FedoraLinux<span class="hljs-literal">-43</span>                  Fedora Linux <span class="hljs-number">43</span><br>FedoraLinux<span class="hljs-literal">-42</span>                  Fedora Linux <span class="hljs-number">42</span><br>eLxr                            eLxr <span class="hljs-number">12.12</span>.<span class="hljs-number">0.0</span> GNU/Linux<br>Ubuntu<span class="hljs-literal">-20</span>.<span class="hljs-number">04</span>                    Ubuntu <span class="hljs-number">20.04</span> LTS<br>Ubuntu<span class="hljs-literal">-22</span>.<span class="hljs-number">04</span>                    Ubuntu <span class="hljs-number">22.04</span> LTS<br>OracleLinux_7_9                 Oracle Linux <span class="hljs-number">7.9</span><br>OracleLinux_8_10                Oracle Linux <span class="hljs-number">8.10</span><br>OracleLinux_9_5                 Oracle Linux <span class="hljs-number">9.5</span><br>openS<span class="hljs-built_in">USE-Leap</span><span class="hljs-literal">-15</span>.<span class="hljs-number">6</span>              openSUSE Leap <span class="hljs-number">15.6</span><br>S<span class="hljs-built_in">USE-Linux</span><span class="hljs-literal">-Enterprise-15-SP6</span>    SUSE Linux Enterprise <span class="hljs-number">15</span> SP6<br></code></pre></td></tr></tbody></table></figure>
+
+
+
+<h3><span id="%E5%90%AF%E7%94%A8windows-subsystem-linux-%E5%92%8C-%E8%99%9A%E6%8B%9F%E5%8C%96">启用Windows Subsystem Linux 和 虚拟化</span></h3><p>按下键盘<code>win+R</code>，并输入<code>powershell</code>回车</p>
+<p>在<code>poershell</code>终端内输入以下内容:</p>
+<figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs powershell">dism.exe /online /<span class="hljs-built_in">enable-feature</span> /featurename:Microsoft<span class="hljs-literal">-Windows-Subsystem-Linux</span> /all /norestart<br>dism.exe /online /<span class="hljs-built_in">enable-feature</span> /featurename:VirtualMachinePlatform /all /norestart<br>wsl <span class="hljs-literal">--set</span> <span class="hljs-literal">--default-version</span> <span class="hljs-number">2</span><br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%E5%AE%89%E8%A3%85wsl">安装WSL</span></h3><p>随后打开你的微软应用商店 Microsoft Store</p>
+<p>搜索 Ubuntu，选择一个你喜欢的版本安装即可</p>
+<p>如果和主播一样，在安装的时候遇到进度卡**0％**可以考虑使用powershell进行安装</p>
+<figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">wsl <span class="hljs-literal">--install</span> <span class="hljs-literal">--web-download</span> <span class="hljs-literal">-d</span> Ubuntu<span class="hljs-literal">-20</span>.<span class="hljs-number">04</span><br></code></pre></td></tr></tbody></table></figure>
+
+<p>在安装完WSL后，我们可以注意到其默认安装目录为：<code>C：Program Files\WindowsApps</code></p>
+<p>后续会占用你大量C盘的空间，因此下一步我们对WSL进行迁移。</p>
+<h3><span id="%E8%BF%81%E7%A7%BBwsl">迁移WSL</span></h3><p>我们首先打开 <strong>PowerShell</strong> </p>
+<p>随后输入 <code>wsl -l -v</code>之后powershell会输出一段：</p>
+<figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs powershell">NAME STATE VERSION<br><br>* Ubuntu<span class="hljs-literal">-20</span>.<span class="hljs-number">04</span> Stopped <span class="hljs-number">2</span><br></code></pre></td></tr></tbody></table></figure>
+
+<p>确认目前状态为 Stopped 之后，我们输入：</p>
+<figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">wsl <span class="hljs-literal">--export</span> Ubunut<span class="hljs-literal">-20</span>.<span class="hljs-number">04</span> D:\WSL\ubuntu<span class="hljs-literal">-20</span>.<span class="hljs-number">04</span>.tar<br></code></pre></td></tr></tbody></table></figure>
+
+<p>将WSL的系统镜像导出到其他盘，随后注销目前系统的WSL</p>
+<figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">wsl <span class="hljs-literal">--unregister</span> Ubuntu<span class="hljs-literal">-20</span>.<span class="hljs-number">04</span><br></code></pre></td></tr></tbody></table></figure>
+
+<p>随后我们导入刚才导出的tar文件</p>
+<figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">wsl <span class="hljs-literal">--import</span> &lt;导入名称&gt; &lt;导入盘的路径&gt; &lt;刚才导出的tar的路径&gt; <span class="hljs-literal">--version</span> <span class="hljs-number">2</span><br></code></pre></td></tr></tbody></table></figure>
+
+<p>例如根据上面的：</p>
+<figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">wsl <span class="hljs-literal">--import</span> Ubuntu<span class="hljs-literal">-20</span>.<span class="hljs-number">04</span> D:\WSL D:\WSL\ubuntu<span class="hljs-literal">-20</span>.<span class="hljs-number">04</span>.tar <span class="hljs-literal">--version</span> <span class="hljs-number">2</span><br></code></pre></td></tr></tbody></table></figure>
+
+<p>随后可以看到wsl已经成功被安装了</p>
+<figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">PS</span> C:\Users\Administrator&gt; wsl <span class="hljs-literal">-l</span> <span class="hljs-literal">-v</span><br>  NAME            STATE           VERSION<br>* Ubuntu<span class="hljs-literal">-20</span>.<span class="hljs-number">04</span>    Running         <span class="hljs-number">2</span><br></code></pre></td></tr></tbody></table></figure>
+
+<p>之后需要配置用户名跟密码</p>
+<p>Unix name 跟 password 就好了</p>
+</body></html>
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>Author：</strong>luluzzy<br>
+        <strong>Link：</strong><a href="https://luluzzy.github.io/2026/01/31/WSL-WSL%E5%85%A5%E9%97%A8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" title="https:&#x2F;&#x2F;luluzzy.github.io&#x2F;2026&#x2F;01&#x2F;31&#x2F;WSL-WSL入门安装教程&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;luluzzy.github.io&#x2F;2026&#x2F;01&#x2F;31&#x2F;WSL-WSL入门安装教程&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+
+		
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>
